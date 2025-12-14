@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>动漫客栈 - 注册</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: url('https://placehold.co/1920x1080') no-repeat center center;
+      background-size: cover;
+      font-family: 'Microsoft YaHei', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-[#0a0a2a] text-white">
+  <!-- 导航栏 -->
+  <nav class="flex justify-between items-center p-4 bg-[#0a0a2a] border-b border-[#333]">
+    <div class="flex items-center space-x-2">
+      <img src="https://placehold.co/60x60" alt="Logo" class="w-12 h-12">
+      <h1 class="text-2xl font-bold text-[#ff66cc]">动漫客栈</h1>
+    </div>
+    <div class="flex space-x-6">
+      <a href="#" class="hover:text-[#ff66cc]">首页</a>
+      <a href="#" class="hover:text-[#ff66cc]">分类</a>
+      <a href="#" class="hover:text-[#ff66cc]">排行</a>
+      <a href="#" class="hover:text-[#ff66cc]">社区</a>
+      <a href="#" class="hover:text-[#ff66cc]">书单</a>
+    </div>
+    <div class="flex items-center space-x-4">
+      <input type="text" placeholder="搜索" class="px-3 py-1 bg-[#222] text-white rounded-l">
+      <button class="px-3 py-1 bg-[#333] text-white rounded-r">搜索</button>
+      <a href="#" class="ml-6 hover:text-[#ff66cc]">注册</a>
+      <a href="#" class="hover:text-[#ff66cc]">登录</a>
+    </div>
+  </nav>
+
+  <!-- 主体内容 -->
+  <div class="flex justify-center items-center min-h-screen relative">
+    <div class="absolute inset-0 bg-[#0a0a2a] opacity-70"></div>
+    <div class="relative z-10 bg-[#111] p-8 rounded-lg shadow-lg w-full max-w-md">
+      <div class="flex justify-between mb-6">
+        <h2 class="text-xl font-bold">欢迎注册</h2>
+        <a href="#" class="text-[#ff66cc]">去登录</a>
+      </div>
+      <form>
+        <div class="mb-4">
+          <label class="block mb-1">用户名:</label>
+          <input type="text" class="w-full p-2 bg-[#222] text-white rounded">
+          <span class="text-xs text-gray-400">至少3位用户名</span>
+        </div>
+        <div class="mb-4">
+          <label class="block mb-1">密码:</label>
+          <input type="password" class="w-full p-2 bg-[#222] text-white rounded">
+          <span class="text-xs text-gray-400">4到8位的密码</span>
+        </div>
+        <div class="mb-4">
+          <label class="block mb-1">确认密码:</label>
+          <input type="password" class="w-full p-2 bg-[#222] text-white rounded">
+          <span class="text-xs text-gray-400">再次输入</span>
+        </div>
+        <div class="mb-4">
+          <label class="block mb-1">手机号码:</label>
+          <input type="text" class="w-full p-2 bg-[#222] text-white rounded">
+          <span class="text-xs text-gray-400">手机号码</span>
+        </div>
+        <div class="mb-6">
+          <label class="block mb-1">邮箱:</label>
+          <input type="email" class="w-full p-2 bg-[#222] text-white rounded">
+          <span class="text-xs text-gray-400">邮箱地址</span>
+        </div>
+        <div class="mb-6">
+          <label class="block mb-1">上传头像:</label>
+          <input type="file" class="w-full p-2 bg-[#222] text-white rounded">
+        </div>
+        <button type="submit" class="w-full p-2 bg-[#555] text-white rounded hover:bg-[#666]">注册</button>
+      </form>
+      <div class="mt-4 text-center">
+        <a href="#" class="text-blue-400 text-sm">返回首页</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
