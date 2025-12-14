@@ -1,0 +1,219 @@
+```html
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>动漫客栈 - 注册</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: url('https://placehold.co/1920x1080') no-repeat center center fixed;
+      background-size: cover;
+    }
+    .navbar {
+      background: rgba(10, 5, 30, 0.8);
+    }
+    .form-container {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 12px;
+      padding: 40px;
+      max-width: 500px;
+      margin: 60px auto;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+    .input-field {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .input-field label {
+      width: 80px;
+      text-align: right;
+      margin-right: 15px;
+      font-weight: bold;
+    }
+    .input-field input {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+    .input-field span {
+      margin-left: 10px;
+      font-size: 12px;
+      color: #666;
+    }
+    .btn-register {
+      width: 100%;
+      padding: 12px;
+      background: #888;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 20px;
+    }
+    .btn-register:hover {
+      background: #777;
+    }
+    .nav-link {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-size: 16px;
+    }
+    .nav-link:hover {
+      text-decoration: underline;
+    }
+    .header-logo {
+      height: 60px;
+      margin-right: 10px;
+    }
+    .search-box {
+      display: flex;
+      align-items: center;
+    }
+    .search-input {
+      padding: 8px 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px 0 0 4px;
+      width: 200px;
+    }
+    .search-btn {
+      padding: 8px 15px;
+      background: #eee;
+      border: 1px solid #ccc;
+      border-left: none;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+    }
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+      border-bottom: 2px solid #ddd;
+    }
+    .tab-item {
+      padding: 10px 20px;
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .tab-item.active {
+      color: #333;
+      border-bottom: 2px solid #333;
+    }
+    .avatar-upload {
+      margin-top: 20px;
+    }
+    .avatar-label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    .file-input {
+      display: inline-block;
+      padding: 5px 10px;
+      background: #f0f0f0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .file-name {
+      display: inline-block;
+      margin-left: 10px;
+      color: #666;
+    }
+    .back-home {
+      display: block;
+      margin-top: 15px;
+      color: #007bff;
+      text-decoration: none;
+    }
+    .back-home:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+  <!-- 导航栏 -->
+  <div class="navbar p-4 flex justify-between items-center">
+    <div class="flex items-center">
+      <img src="https://placehold.co/60x60" alt="Logo" class="header-logo" />
+      <span class="text-2xl font-bold text-pink-500">动漫客栈</span>
+      <nav class="ml-8">
+        <a href="#" class="nav-link">首页</a>
+        <a href="#" class="nav-link">分类</a>
+        <a href="#" class="nav-link">排行</a>
+        <a href="#" class="nav-link">社区</a>
+        <a href="#" class="nav-link">书单</a>
+      </nav>
+    </div>
+    <div class="flex items-center">
+      <div class="search-box mr-8">
+        <input type="text" placeholder="搜索" class="search-input" />
+        <button class="search-btn">搜索</button>
+      </div>
+      <a href="#" class="nav-link">注册</a>
+      <a href="#" class="nav-link">登录</a>
+    </div>
+  </div>
+
+  <!-- 注册表单 -->
+  <div class="form-container">
+    <div class="tabs">
+      <div class="tab-item active">欢迎注册</div>
+      <div class="tab-item">去登录</div>
+    </div>
+
+    <form>
+      <div class="input-field">
+        <label for="username">用户名:</label>
+        <input type="text" id="username" placeholder="" />
+        <span>至少3位用户名</span>
+      </div>
+
+      <div class="input-field">
+        <label for="password">密码:</label>
+        <input type="password" id="password" placeholder="" />
+        <span>4到8位的密码</span>
+      </div>
+
+      <div class="input-field">
+        <label for="confirmPassword">确认密码:</label>
+        <input type="password" id="confirmPassword" placeholder="" />
+        <span>再次输入</span>
+      </div>
+
+      <div class="input-field">
+        <label for="phone">手机号码:</label>
+        <input type="text" id="phone" placeholder="" />
+        <span>手机号码</span>
+      </div>
+
+      <div class="input-field">
+        <label for="email">邮箱:</label>
+        <input type="email" id="email" placeholder="" />
+        <span>邮箱地址</span>
+      </div>
+
+      <button type="button" class="btn-register">注册</button>
+
+      <div class="avatar-upload">
+        <div class="avatar-label">上传头像</div>
+        <label class="file-input">
+          选择文件
+          <input type="file" style="display:none;" />
+        </label>
+        <span class="file-name">未选择文件</span>
+      </div>
+
+      <a href="#" class="back-home">返回首页</a>
+    </form>
+  </div>
+</body>
+</html>
+```
