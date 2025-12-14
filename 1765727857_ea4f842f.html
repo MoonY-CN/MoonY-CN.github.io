@@ -1,0 +1,150 @@
+```html
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>动漫客栈 - 注册</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: url('https://placehold.co/1920x1080') no-repeat center center fixed;
+      background-size: cover;
+    }
+    .navbar {
+      background: rgba(10, 5, 30, 0.8);
+    }
+    .form-container {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 12px;
+      padding: 40px;
+      max-width: 500px;
+      margin: 60px auto;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+    .input-group {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .input-group label {
+      width: 80px;
+      text-align: right;
+      margin-right: 15px;
+      font-weight: bold;
+    }
+    .input-group input {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    .input-group .hint {
+      margin-left: 10px;
+      font-size: 12px;
+      color: #666;
+    }
+    .btn-register {
+      width: 100%;
+      padding: 12px;
+      background: #888;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .btn-register:hover {
+      background: #777;
+    }
+    .upload-section {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+    }
+    .upload-section label {
+      margin-right: 10px;
+      font-weight: bold;
+    }
+    .upload-section input[type="file"] {
+      padding: 5px;
+    }
+    .footer-link {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      color: #007BFF;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+  <!-- 导航栏 -->
+  <nav class="navbar p-4 flex justify-between items-center text-white">
+    <div class="flex items-center space-x-4">
+      <img src="https://placehold.co/60x60" alt="Logo" class="h-12 w-12 rounded-full" />
+      <span class="text-2xl font-bold">动漫客栈</span>
+      <ul class="flex space-x-6 ml-8">
+        <li><a href="#" class="hover:text-pink-300">首页</a></li>
+        <li><a href="#" class="hover:text-pink-300">分类</a></li>
+        <li><a href="#" class="hover:text-pink-300">排行</a></li>
+        <li><a href="#" class="hover:text-pink-300">社区</a></li>
+        <li><a href="#" class="hover:text-pink-300">书单</a></li>
+      </ul>
+    </div>
+    <div class="flex items-center space-x-4">
+      <input type="text" placeholder="搜索" class="px-4 py-2 rounded-l-md text-black" />
+      <button class="bg-white text-black px-4 py-2 rounded-r-md hover:bg-gray-200">搜索</button>
+      <a href="#" class="ml-8 hover:text-pink-300">注册</a>
+      <a href="#" class="hover:text-pink-300">登录</a>
+    </div>
+  </nav>
+
+  <!-- 注册表单 -->
+  <div class="form-container">
+    <div class="text-center mb-6">
+      <h2 class="text-2xl font-bold text-gray-800">欢迎注册</h2>
+      <a href="#" class="text-lg text-gray-600 ml-6">去登录</a>
+    </div>
+    <hr class="mb-6" />
+
+    <form>
+      <div class="input-group">
+        <label for="username">用户名:</label>
+        <input type="text" id="username" placeholder="" />
+        <span class="hint">至少3位用户名</span>
+      </div>
+      <div class="input-group">
+        <label for="password">密码:</label>
+        <input type="password" id="password" placeholder="" />
+        <span class="hint">4到8位的密码</span>
+      </div>
+      <div class="input-group">
+        <label for="confirmPassword">确认密码:</label>
+        <input type="password" id="confirmPassword" placeholder="" />
+        <span class="hint">再次输入</span>
+      </div>
+      <div class="input-group">
+        <label for="phone">手机号码:</label>
+        <input type="text" id="phone" placeholder="" />
+        <span class="hint">手机号码</span>
+      </div>
+      <div class="input-group">
+        <label for="email">邮箱:</label>
+        <input type="email" id="email" placeholder="" />
+        <span class="hint">邮箱地址</span>
+      </div>
+
+      <button type="submit" class="btn-register">注册</button>
+
+      <div class="upload-section">
+        <label for="avatar">上传头像</label>
+        <input type="file" id="avatar" accept="image/*" />
+      </div>
+
+      <a href="#" class="footer-link">返回首页</a>
+    </form>
+  </div>
+</body>
+</html>
+```
