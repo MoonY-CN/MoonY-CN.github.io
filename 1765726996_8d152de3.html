@@ -1,0 +1,259 @@
+```html
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .phone-frame {
+      border: 12px solid #000;
+      border-radius: 36px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+      overflow: hidden;
+      position: relative;
+      width: 350px;
+      height: 700px;
+      background: white;
+    }
+    .notch {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px;
+      height: 30px;
+      background: black;
+      border-radius: 0 0 15px 15px;
+      z-index: 10;
+    }
+    .status-bar {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 15px;
+      font-size: 12px;
+      color: #333;
+    }
+    .balance-card {
+      background: linear-gradient(135deg, #1a1a2e, #16213e);
+      border-radius: 20px;
+      padding: 20px;
+      color: white;
+      margin: 15px 15px 0;
+    }
+    .activity-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .icon-circle {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 15px;
+    }
+    .fab {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 60px;
+      background: #1a1a2e;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 24px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    .nav-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      font-size: 12px;
+      color: #666;
+    }
+    .nav-item.active {
+      color: #4f46e5;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 p-8 font-sans">
+  <!-- Header -->
+  <div class="flex justify-between items-center mb-12">
+    <div class="flex items-center gap-2">
+      <div class="w-10 h-10 bg-black rounded flex items-center justify-center text-white font-bold">XD</div>
+      <h1 class="text-2xl font-bold">XDesign</h1>
+    </div>
+    <div class="text-sm font-medium">UI/UX Design ▪</div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="text-center mb-8">
+    <h2 class="text-4xl font-bold mb-4">每一笔消费，都有迹可循</h2>
+    <h3 class="text-3xl font-semibold">收入支出，实时更新</h3>
+  </div>
+
+  <!-- Phone Mockup -->
+  <div class="flex justify-center">
+    <div class="phone-frame">
+      <div class="notch"></div>
+      
+      <!-- Status Bar -->
+      <div class="status-bar">
+        <span>9:41</span>
+        <div class="flex gap-1">
+          <span>●●●●</span>
+          <span>📶</span>
+          <span>🔋</span>
+        </div>
+      </div>
+
+      <!-- App Header -->
+      <div class="px-5 py-4 flex justify-between items-center">
+        <div class="flex items-center gap-2">
+          <img src="https://placehold.co/32x32" alt="Avatar" class="rounded-full">
+          <div>
+            <div class="text-xs text-gray-500">WELCOME BACK</div>
+            <div class="font-semibold">Isabella</div>
+          </div>
+        </div>
+        <button class="text-xl">🔔</button>
+      </div>
+
+      <!-- Balance Card -->
+      <div class="balance-card">
+        <div class="flex justify-between items-start mb-4">
+          <div>
+            <div class="text-xs opacity-70">TOTAL BALANCE</div>
+            <div class="text-3xl font-bold">¥84,250.00</div>
+          </div>
+          <div class="bg-green-500 bg-opacity-20 px-3 py-1 rounded-full text-sm">
+            <span class="text-green-500">+12%</span>
+          </div>
+        </div>
+        <div class="flex justify-between text-sm">
+          <div class="flex items-center gap-1">
+            <div class="w-3 h-3 bg-green-400 rounded-full"></div>
+            <span>INCOME</span>
+            <span class="font-bold">¥12,400</span>
+          </div>
+          <div class="flex items-center gap-1">
+            <div class="w-3 h-3 bg-red-400 rounded-full"></div>
+            <span>EXPENSE</span>
+            <span class="font-bold">¥4,120</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Actions -->
+      <div class="grid grid-cols-4 gap-4 px-5 mt-4">
+        <div class="text-center p-3 rounded-lg bg-white shadow-sm">
+          <div class="text-blue-500 text-xl mb-1">▶</div>
+          <div class="text-xs">Transfer</div>
+        </div>
+        <div class="text-center p-3 rounded-lg bg-white shadow-sm">
+          <div class="text-red-500 text-xl mb-1">💳+</div>
+          <div class="text-xs">Top-up</div>
+        </div>
+        <div class="text-center p-3 rounded-lg bg-white shadow-sm">
+          <div class="text-green-500 text-xl mb-1">💰</div>
+          <div class="text-xs">Savings</div>
+        </div>
+        <div class="text-center p-3 rounded-lg bg-white shadow-sm">
+          <div class="text-gray-500 text-xl mb-1">☰</div>
+          <div class="text-xs">More</div>
+        </div>
+      </div>
+
+      <!-- Recent Activity -->
+      <div class="px-5 pt-6">
+        <div class="flex justify-between items-center mb-4">
+          <h4 class="font-bold">Recent Activity</h4>
+          <button class="text-blue-500 text-sm">View All</button>
+        </div>
+
+        <!-- Activity List -->
+        <div class="bg-white rounded-lg shadow-sm">
+          <div class="activity-item">
+            <div class="flex items-center">
+              <div class="icon-circle bg-pink-100">
+                <span class="text-pink-600">🛍️</span>
+              </div>
+              <div>
+                <div class="font-medium">Apple Store</div>
+                <div class="text-xs text-gray-500">Shopping</div>
+              </div>
+            </div>
+            <div class="text-right">
+              <div class="font-bold text-red-600">-¥3,299</div>
+              <div class="text-xs text-gray-400">Today</div>
+            </div>
+          </div>
+
+          <div class="activity-item">
+            <div class="flex items-center">
+              <div class="icon-circle bg-orange-100">
+                <span class="text-orange-600">☕</span>
+              </div>
+              <div>
+                <div class="font-medium">Starbucks Coffee</div>
+                <div class="text-xs text-gray-500">Food</div>
+              </div>
+            </div>
+            <div class="text-right">
+              <div class="font-bold text-red-600">-¥85</div>
+              <div class="text-xs text-gray-400">Today</div>
+            </div>
+          </div>
+
+          <div class="activity-item">
+            <div class="flex items-center">
+              <div class="icon-circle bg-blue-100">
+                <span class="text-blue-600">🚗</span>
+              </div>
+              <div>
+                <div class="font-medium">Uber Ride</div>
+                <div class="text-xs text-gray-500">Transport</div>
+              </div>
+            </div>
+            <div class="text-right">
+              <div class="font-bold text-red-600">-¥45.5</div>
+              <div class="text-xs text-gray-400">Yesterday</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Floating Action Button -->
+      <div class="fab">+</div>
+
+      <!-- Bottom Navigation -->
+      <div class="absolute bottom-0 left-0 right-0 bg-white border-t border-gray-200 flex justify-around py-3">
+        <div class="nav-item active">
+          <span>🏠</span>
+        </div>
+        <div class="nav-item">
+          <span>🔄</span>
+        </div>
+        <div class="nav-item">
+          <span>📊</span>
+        </div>
+        <div class="nav-item">
+          <span>👤</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+```
