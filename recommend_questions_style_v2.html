@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>推荐问题样式</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-200 font-sans">
+    <!-- 顶部状态栏 -->
+    <div class="bg-black text-white p-4 flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+            <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+            <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+            <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+        </div>
+        <div class="text-sm">iPhone 17 Pro Max - iOS 26.1</div>
+        <div class="flex items-center space-x-4">
+            <i class="fas fa-home"></i>
+            <i class="fas fa-camera"></i>
+            <i class="fas fa-copy"></i>
+        </div>
+    </div>
+
+    <!-- 导航栏 -->
+    <div class="bg-white p-4 flex items-center justify-between border-b">
+        <div class="flex items-center space-x-2">
+            <i class="fas fa-arrow-left text-gray-500"></i>
+            <img src="https://placehold.co/40x40" alt="头像" class="w-10 h-10 rounded-full">
+            <span class="font-bold">悦小宝</span>
+        </div>
+        <i class="fas fa-ellipsis-h text-gray-500"></i>
+    </div>
+
+    <!-- 消息列表 -->
+    <div class="p-4 space-y-4">
+        <!-- 用户消息 -->
+        <div class="flex items-start space-x-2">
+            <img src="https://placehold.co/40x40" alt="头像" class="w-10 h-10 rounded-full">
+            <div class="bg-blue-500 text-white p-3 rounded-lg max-w-xs">
+                原厂火花塞跟自己在外面或网上买的有什么区别
+            </div>
+        </div>
+
+        <!-- 系统提示消息 -->
+        <div class="bg-white p-3 rounded-lg border border-gray-300">
+            抱歉，您的表述较为模糊，请提供更多细节，以便我能更准确地帮助您。以下是推荐问题：<br><br>
+            <div class="space-y-2 mt-2">
+                <div class="bg-[#fafafa] p-2 rounded">原厂火花塞跟自己在外面或网上买的有什么区别</div>
+                <div class="bg-[#fafafa] p-2 rounded">如果火花塞出问题，可能导致什么风险</div>
+                <div class="bg-[#fafafa] p-2 rounded">使用原装火花塞的优势</div>
+            </div>
+            <br>
+            如对该答案不满意，请点击下方“问吧”按钮将此问题发布至“问吧”社区。
+        </div>
+
+        <!-- 回复消息 -->
+        <div class="flex justify-end">
+            <div class="bg-blue-500 text-white p-3 rounded-lg max-w-xs">
+                原厂火花塞跟自己在外面或网上买的有什么区别
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部输入框 -->
+    <div class="bg-white p-4 flex items-center space-x-2 border-t">
+        <input type="text" placeholder="开始对话吧~" class="flex-1 p-2 border rounded-full">
+        <button class="bg-blue-500 text-white p-2 rounded-full">
+            <i class="fas fa-microphone"></i>
+        </button>
+    </div>
+</body>
+</html>
